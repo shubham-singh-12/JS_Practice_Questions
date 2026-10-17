@@ -1,0 +1,418 @@
+// ==================================================================================================================================================
+// ==================================================================== IF ELSE =====================================================================
+// ==================================================================================================================================================
+
+// ====================================================================== Easy ======================================================================
+
+// 1. Check whether a number is positive or negative.
+let userNumber_1 = 2;
+
+if (userNumber_1 > 0) {
+    console.log(`${userNumber_1} is Positive`);
+} else if (userNumber_1 < 0) {
+    console.log(`${userNumber_1} is Negative`);
+} else {
+    console.log(`${userNumber_1} is Zero`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 2. Check whether a number is even or odd.
+let userNumber_2 = 3;
+
+if (userNumber_2 % 2 === 0) {
+    console.log(`${userNumber_2} is an EVEN number.`);
+} else {
+    console.log(`${userNumber_2} is an ODD number.`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 3. Check whether a character is a vowel or consonant.
+let userCharacter_3 = "a";
+
+let convertCharacter_3 = userCharacter_3.toLowerCase();
+
+if (
+    convertCharacter_3 === "a" ||
+    convertCharacter_3 === "e" ||
+    convertCharacter_3 === "i" ||
+    convertCharacter_3 === "o" ||
+    convertCharacter_3 === "u"
+) {
+    console.log(`${userCharacter_3} is a VOWEL`);
+} else {
+    console.log(`${userCharacter_3} is a CONSTANT`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 4. Print the day name based on a number (1–7).
+let currentDayNumber_4 = 1;
+
+switch (currentDayNumber_4) {
+    case 1:
+        console.log("Today is Monday");
+        break;
+
+    case 2:
+        console.log("Today is Tuesday");
+        break;
+
+    case 3:
+        console.log("Today is Wednesday");
+        break;
+
+    case 4:
+        console.log("Today is Thursday");
+        break;
+
+    case 5:
+        console.log("Today is Friday");
+        break;
+
+    case 6:
+        console.log("Today is Saturday");
+        break;
+
+    case 7:
+        console.log("Today is Sunday");
+        break;
+
+    default:
+        console.log(`${currentDayNumber_4} is Invalid`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 5. Determine if a given number is zero, positive, or negative.
+let givenNumber_5 = 0;
+
+if (givenNumber_5 > 0) {
+    console.log(`${givenNumber_5} is POSITIVE`);
+} else if (givenNumber_5 < 0) {
+    console.log(`${givenNumber_5} is NEGATIVE`);
+} else {
+    console.log(`${givenNumber_5} is ZERO`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 6. Determine if a number is divisible by 3.
+let givenNumber_6 = 10;
+
+if (givenNumber_6 % 3 === 0) {
+    console.log(`${givenNumber_6} is divisible by 3`);
+} else {
+    console.log(`${givenNumber_6} is NOT divisible by 3`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 7. Determine whether a given letter is uppercase or lowercase.
+let givenLetter_7 = "1";
+
+if (!/[a-zA-Z]/.test(givenLetter_7)) {
+    console.log(`${givenLetter_7} is NOT a VALID character`);
+} else if (givenLetter_7 === givenLetter_7.toUpperCase()) {
+    console.log(`${givenLetter_7} is UPPERCASE`);
+} else {
+    console.log(`${givenLetter_7} is LOWERCASE`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 8. Output the season name based on a month number.
+
+let userInputMonth_8 = "January";
+let monthName_8 = userInputMonth_8
+    .charAt(0)
+    .toUpperCase()
+    .concat(userInputMonth_8.slice(1).toLowerCase());
+
+switch (monthName_8) {
+    case "December":
+    case "January":
+    case "February":
+        console.log(`It's a WINTER`);
+        break;
+
+    case "March":
+    case "April":
+    case "May":
+    case "June":
+        console.log(`It's SUMMER`);
+        break;
+
+    case "July":
+    case "August":
+    case "September":
+        console.log(`It's RAINY`);
+        break;
+
+    case "October":
+    case "November":
+        console.log(`It's MONSOON`);
+        break;
+
+    default:
+        console.log(`INVALID MONTH`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 9. Check whether a given character is a digit or a letter.
+let userInput_9 = "A";
+
+if (/[a-zA-Z]/.test(userInput_9)) {
+    console.log(`${userInput_9} is a LETTER`);
+} else if (/[0-9]/.test(userInput_9)) {
+    console.log(`${userInput_9} is a DIGIT`);
+} else {
+    console.log(`${userInput_9} might be a SYMBOL or EMOJI`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 10. Check whether a number is a multiple of 7.
+let userNumber_10 = 78;
+
+if (userNumber_10 % 7 === 0) {
+    console.log(`${userNumber_10} is a Multiple of 7`);
+} else {
+    console.log(`${userNumber_10} is NOT a multiple of 7`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 11. Determine if a triangle is valid given three angles (must sum to 180).
+let firstAngle_11 = 60;
+let secondAngle_11 = 60;
+let thirdAngle_11 = 60;
+
+if (firstAngle_11 + secondAngle_11 + thirdAngle_11 === 180) {
+    console.log(`It's a VALID Triangle.`);
+} else {
+    console.log(`It's NOT a VALID Triangle.`);
+}
+
+console.log();
+
+// ==================================================================================================================================================
+// 12. Check whether a number falls within the range 10–50.
+
+// ==================================================================================================================================================
+// 13. Determine if a string is empty or not.
+
+// ==================================================================================================================================================
+// 14. Check whether a number ends in 0 (i.e., is a multiple of 10).
+
+// ==================================================================================================================================================
+// 15. Determine whether a given temperature is above or below freezing (0°C).
+
+// ==================================================================================================================================================
+// 16. Check whether a person is a minor, adult, or senior citizen (age brackets).
+
+// ==================================================================================================================================================
+// 17. Determine if a given month has 30 or 31 days (ignore February).
+
+// ==================================================================================================================================================
+// 18. Check whether an ATM withdrawal amount is a multiple of 100.
+
+// ==================================================================================================================================================
+// 19. Determine whether a light switch state ("ON"/"OFF") should toggle correctly.
+
+// ==================================================================================================================================================
+// 20. Check if a number is a single-digit or multi-digit number.
+
+// ==================================================================================================================================================
+// 21. Determine whether today is a weekday or weekend, given a day number (1–7).
+
+// ==================================================================================================================================================
+// 22. Check whether a given price qualifies for free shipping (above ₹500).
+
+// ==================================================================================================================================================
+// 23. Determine if a shape name entered matches "circle", "square", or "triangle".
+
+// ==================================================================================================================================================
+// 24. Check whether a given number is positive, and if so, whether it's also even.
+
+// ==================================================================================================================================================
+// 25. Determine if a movie ticket should get a child, adult, or senior price based on age.
+
+// ==================================================================================================================================================
+// 26. Check whether a battery percentage is low (<20%), medium, or full.
+
+// ==================================================================================================================================================
+// 27. Determine if a given string starts with a vowel.
+
+// ==================================================================================================================================================
+// 28. Check whether a user's rating (1–5) is valid input.
+
+
+
+// ==================================================================================================================================================
+// ===================================================================== Medium =====================================================================
+// ==================================================================================================================================================
+
+// 1. Check whether a person is eligible to vote.
+
+// ==================================================================================================================================================
+// 2. Find the largest among two numbers.
+
+// ==================================================================================================================================================
+// 3. Find the largest among three numbers.
+
+// ==================================================================================================================================================
+// 4. Check whether a year is a leap year.
+
+// ==================================================================================================================================================
+// 5. Check whether a number is divisible by both 3 and 5.
+
+// ==================================================================================================================================================
+// 6. Check whether a username is `"admin"` and password is `"1234"`.
+
+// ==================================================================================================================================================
+// 7. Determine if someone qualifies for a student discount (age under 25).
+
+// ==================================================================================================================================================
+// 8. Identify the bigger of two given marks.
+
+// ==================================================================================================================================================
+// 9. Identify the biggest of three given marks.
+
+// ==================================================================================================================================================
+// 10. Determine if a given year falls in the 21st century.
+
+// ==================================================================================================================================================
+// 11. Determine if a number is divisible by both 4 and 6.
+
+// ==================================================================================================================================================
+// 12. Verify that an entered PIN equals "4321".
+
+// ==================================================================================================================================================
+// 13. Build a BMI calculator that classifies a person as Underweight, Normal, Overweight, or Obese.
+
+// ==================================================================================================================================================
+// 14. Determine ticket pricing based on both age and day of the week (weekday/weekend discount).
+
+// ==================================================================================================================================================
+// 15. Build a simple traffic light simulator that prints an action ("Stop", "Wait", "Go") based on color input.
+
+// ==================================================================================================================================================
+// 16. Check whether a triangle is equilateral, isosceles, or scalene given three side lengths.
+
+// ==================================================================================================================================================
+// 17. Determine whether a given number is a perfect square.
+
+// ==================================================================================================================================================
+// 18. Build a password strength checker (Weak/Medium/Strong) based on length and character variety.
+
+// ==================================================================================================================================================
+// 19. Determine the quadrant of a point (x, y) on a Cartesian plane.
+
+// ==================================================================================================================================================
+// 20. Build a simple login system that also locks the account after checking a failed-attempts counter.
+
+// ==================================================================================================================================================
+// 21. Determine shipping cost based on weight (in kg) using tiered pricing.
+
+// ==================================================================================================================================================
+// 22. Check whether three given numbers can form a valid triangle (triangle inequality).
+
+// ==================================================================================================================================================
+// 23. Build an income tax calculator with multiple tax slabs.
+// /* 
+//   Tax Slabs Breakdown:
+//   - ₹0 to ₹3,00,000            : 0% (Exempt)
+//   - ₹3,00,001 to ₹7,00,000     : 5%  (Max ₹20,000)
+//   - ₹7,00,001 to ₹10,00,000    : 10% (Max ₹30,000)
+//   - ₹10,00,001 to ₹12,00,000   : 15% (Max ₹30,000)
+//   - ₹12,00,001 to ₹15,00,000   : 20% (Max ₹60,000)
+//   - Above ₹15,00,000           : 30%
+// */
+
+// ==================================================================================================================================================
+// 24. Build a movie rating classifier: G, PG, PG-13, R based on age and content flag.
+
+// ==================================================================================================================================================
+// 25. Determine exam pass/fail status based on both attendance percentage and marks.
+
+// ==================================================================================================================================================
+// 26. Build a simple currency exchange calculator using switch for currency codes.
+
+// ==================================================================================================================================================
+// 27. Determine the day type (Public Holiday, Weekend, Working Day) using both a day number and a holiday flag.
+
+// ==================================================================================================================================================
+
+// ==================================================================================================================================================
+// ====================================================================== Hard ======================================================================
+// ==================================================================================================================================================
+
+// 1. Create a simple grading system:
+// - 90+ → A
+// - 75+ → B
+// - 50+ → C
+// - below 50 → Fail
+
+// ==================================================================================================================================================
+// 2. Create a calculator using `switch` statement.
+
+// ==================================================================================================================================================
+// 3. Build a fuel efficiency rating system:
+
+// ==================================================================================================================================================
+// - 20+ km/l → Excellent
+// - 15–19 km/l → Good
+// - 10–14 km/l → Average
+// - below 10 → Poor
+
+// ==================================================================================================================================================
+// 4. Build a basic unit converter (km to miles, kg to lbs, etc.) using switch.
+
+// ==================================================================================================================================================
+// 5. Build a BMI + age + activity level combined health-risk classifier.
+
+// ==================================================================================================================================================
+// 6. Determine whether a given year, month, and day combination represents a valid leap-year February date (e.g., Feb 29 only valid in leap years).
+
+// ==================================================================================================================================================
+// 7. Build a multi-tier employee bonus calculator based on department, performance score, and years of experience.
+
+// ==================================================================================================================================================
+// 8. Build a loan eligibility checker based on income, credit score, and existing debt ratio.
+
+// ==================================================================================================================================================
+// 9. Determine the correct postal/shipping zone and cost using nested conditions on country, weight, and delivery speed.
+
+// ==================================================================================================================================================
+// 10. Build a grading system that also computes GPA using nested conditions per subject.
+
+// ==================================================================================================================================================
+// 11. Check whether a given chess coordinate (e.g., "e4") is a valid position on the board.
+
+// ==================================================================================================================================================
+// 12. Build a flight ticket pricing system factoring in class (Economy/Business/First), season, and advance booking days.
+
+// ==================================================================================================================================================
+// 13. Build a multi-condition eligibility checker for a scholarship (marks, income, category, extracurricular score).
+
+// ==================================================================================================================================================
+// 14. Simulate a vending machine that checks selected item, inserted amount, and stock availability.
+
+// ==================================================================================================================================================
+// 15. Build a weather-based clothing recommender using temperature, humidity, and wind speed together.
+
+// ==================================================================================================================================================
+// 16. Build a hospital triage priority system that classifies patients as Critical, Urgent, or Non-Urgent based on multiple vital signs (heart rate, temperature, oxygen level).
