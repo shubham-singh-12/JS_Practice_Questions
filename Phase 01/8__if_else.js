@@ -210,30 +210,148 @@ console.log();
 
 // ==================================================================================================================================================
 // 12. Check whether a number falls within the range 10–50.
+let userNumber_12 = 49;
+
+if (typeof userNumber_12 === "number") {
+    if (userNumber_12 < 50 && userNumber_12 > 10) {
+        console.log(`${userNumber_12} falls within the range 10-50`);
+    } else {
+        console.log(`${userNumber_12} does NOT falls within the range 10-50`);
+    }
+} else {
+    console.log(`${userNumber_12} is a STRING.`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 13. Determine if a string is empty or not.
+let userString_13 = 66;
+
+if (typeof userString_13 === "string") {
+    if (userString_13.length !== 0) {
+        console.log(`${userString_13} is NOT EMPTY`);
+    } else {
+        console.log(`The string is EMPTY`);
+    }
+} else {
+    console.log(
+        `The provided value type is a ${typeof userString_13}, NOT STRING`,
+    );
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 14. Check whether a number ends in 0 (i.e., is a multiple of 10).
+let userNumber_14 = 21;
+
+if (typeof userNumber_14 === "number") {
+    if (userNumber_14 % 10 === 0) {
+        console.log(`${userNumber_14} is a multiple of 10`);
+    } else {
+        console.log(`${userNumber_14} is NOT a mutiple of 10`);
+    }
+} else {
+    console.log(`${userNumber_14} is a ${typeof userNumber_14}`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 15. Determine whether a given temperature is above or below freezing (0°C).
+let userGivenTemperature_15 = -1;
+
+if (userGivenTemperature_15 < 0) {
+    console.log(`The given temperature is BELOW 0°C`);
+} else if (userGivenTemperature_15 > 0) {
+    console.log(`The given temperature is ABOVE 0°C`);
+} else {
+    console.log(`The temperaure is 0°C`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 16. Check whether a person is a minor, adult, or senior citizen (age brackets).
+let personAge_16 = 101;
+
+if (personAge_16 > 1 && personAge_16 < 18) {
+    console.log(`Person is a MINOR`);
+} else if (personAge_16 > 18 && personAge_16 < 60) {
+    console.log(`Person is an ADULT`);
+} else if (personAge_16 > 60 && personAge_16 < 100) {
+    console.log(`Person is a SENIOR CITIZEN`);
+} else {
+    console.log(`INVALID PERSON AGE`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 17. Determine if a given month has 30 or 31 days (ignore February).
+let userMonthChoice_17 = "May";
+
+let monthName_17 = `${userMonthChoice_17[0].toUpperCase() + userMonthChoice_17.slice(1).toLowerCase()}`;
+
+if (
+    monthName_17 === "January" ||
+    monthName_17 === "March" ||
+    monthName_17 === "May" ||
+    monthName_17 === "July" ||
+    monthName_17 === "August" ||
+    monthName_17 === "October" ||
+    monthName_17 === "December"
+) {
+    console.log(`${userMonthChoice_17} is of 31 days`);
+} else if (monthName_17 === "February") {
+    console.log(
+        `${monthName_17} is of either 28 / 29 days, based on Leap Year`,
+    );
+} else {
+    console.log(`${userMonthChoice_17} is of 30 days`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 18. Check whether an ATM withdrawal amount is a multiple of 100.
+let atmWithdrawal_18 = 20000;
+
+if (atmWithdrawal_18 % 100 === 0) {
+    console.log(`₹ ${atmWithdrawal_18}/- withdrawal is a multiple of 100`);
+} else {
+    console.log(`₹ ${atmWithdrawal_18}/- withdrawal is NOT a multiple of 100`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 19. Determine whether a light switch state ("ON"/"OFF") should toggle correctly.
+let currentLightSwitchState_19 = "OFF";
+
+if (currentLightSwitchState_19 === "ON") {
+    currentLightSwitchState_19 = "OFF";
+} else {
+    currentLightSwitchState_19 = "ON";
+}
+console.log(`Currently Light switch state is: ${currentLightSwitchState_19}`);
+
+console.log();
 
 // ==================================================================================================================================================
 // 20. Check if a number is a single-digit or multi-digit number.
+let userNumber_20;
+let useNumberLength_20 = Math.abs(userNumber_20).toString().length;
+console.log(useNumberLength_20)
+
+if (useNumberLength_20 === 1) {
+    console.log(`Number is a Single-digit number: ${userNumber_20}`);
+} else {
+    console.log(`Number is a Multi-digit number: ${userNumber_20}`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 21. Determine whether today is a weekday or weekend, given a day number (1–7).
@@ -258,8 +376,6 @@ console.log();
 
 // ==================================================================================================================================================
 // 28. Check whether a user's rating (1–5) is valid input.
-
-
 
 // ==================================================================================================================================================
 // ===================================================================== Medium =====================================================================
@@ -332,7 +448,7 @@ console.log();
 
 // ==================================================================================================================================================
 // 23. Build an income tax calculator with multiple tax slabs.
-// /* 
+// /*
 //   Tax Slabs Breakdown:
 //   - ₹0 to ₹3,00,000            : 0% (Exempt)
 //   - ₹3,00,001 to ₹7,00,000     : 5%  (Max ₹20,000)
