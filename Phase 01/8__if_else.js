@@ -343,7 +343,7 @@ console.log();
 // 20. Check if a number is a single-digit or multi-digit number.
 let userNumber_20;
 let useNumberLength_20 = Math.abs(userNumber_20).toString().length;
-console.log(useNumberLength_20)
+console.log(useNumberLength_20);
 
 if (useNumberLength_20 === 1) {
     console.log(`Number is a Single-digit number: ${userNumber_20}`);
@@ -356,26 +356,151 @@ console.log();
 // ==================================================================================================================================================
 // 21. Determine whether today is a weekday or weekend, given a day number (1–7).
 
+// 1: Sunday, 2: Monday, 3: Tuesday, 4: Wednesday, 5: Thursday, 6: Friday, 7: Saturday
+let userGivenNumber_21 = "2";
+
+switch (Number(userGivenNumber_21)) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+        console.log(`Today is a Weekday`);
+        break;
+
+    case 7:
+    case 1:
+        console.log(`Today is Weekend`);
+        break;
+
+    default:
+        console.log(`INVALID DAY INPUT`);
+}
+
+console.log();
+
 // ==================================================================================================================================================
 // 22. Check whether a given price qualifies for free shipping (above ₹500).
+let userProductPrice_22 = 501;
+
+if (
+    typeof userProductPrice_22 !== "number" ||
+    isNaN(userProductPrice_22) ||
+    userProductPrice_22 < 0
+) {
+    console.log(`INVALID INPUT`);
+} else if (userProductPrice_22 <= 500) {
+    console.log(`NOT Eligible for free shipping`);
+} else {
+    console.log(`Eligible for free shipping`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 23. Determine if a shape name entered matches "circle", "square", or "triangle".
+let userDetermineShape_23 = "Rectangle";
+
+if (userDetermineShape_23.toLowerCase().trim() === "circle") {
+    console.log(`User Guess CIRCLE`);
+} else if (userDetermineShape_23.toLowerCase().trim() === "square") {
+    console.log(`User Guess SQUARE`);
+} else if (userDetermineShape_23.toLowerCase().trim() === "triangle") {
+    console.log(`User Guess TRIANGLE`);
+} else {
+    console.log(`USER Guess Something else`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 24. Check whether a given number is positive, and if so, whether it's also even.
+let userGivenNumber_24 = NaN;
+
+if (typeof userGivenNumber_24 !== "number" || isNaN(userGivenNumber_24)) {
+    console.log(`INVALID INPUT`);
+} else if (userGivenNumber_24 === 0) {
+    console.log(`User Choose ZERO (neither -ve nor -ve)`);
+} else if (userGivenNumber_24 > 0) {
+    if (userGivenNumber_24 % 2 === 0) {
+        console.log(`User Choose +ve EvVEN Number.`);
+    } else {
+        console.log(`User Choose +ve ODD Number.`);
+    }
+} else {
+    console.log(`User Choose -ve Number`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 25. Determine if a movie ticket should get a child, adult, or senior price based on age.
+let userAge_25 = 70;
+
+if (typeof userAge_25 !== "number" || isNaN(userAge_25) || userAge_25 < 0) {
+    console.log(`INVALID INPUT`);
+} else if (userAge_25 >= 0 && userAge_25 <= 12) {
+    console.log(`CHILD PRICE`);
+} else if (userAge_25 >= 13 && userAge_25 <= 64) {
+    console.log(`ADULT PRICE`);
+} else {
+    console.log(`SENIOR PRICE`);
+}
 
 // ==================================================================================================================================================
 // 26. Check whether a battery percentage is low (<20%), medium, or full.
+let batteryPercentage_26 = 20;
+
+if (
+    typeof batteryPercentage_26 !== "number" ||
+    isNaN(batteryPercentage_26) ||
+    batteryPercentage_26 > 100
+) {
+    console.log(`INVALID PERCENTAGE`);
+} else if (batteryPercentage_26 <= 20) {
+    console.log(`LOW Battery`);
+} else if (batteryPercentage_26 <= 70) {
+    console.log(`MEDUIM Battery Charged`);
+} else {
+    console.log(`Almost FULLY Charded`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 27. Determine if a given string starts with a vowel.
+let userString_27 = " Alpha";
+
+if (typeof userString_27 !== "string" || userString_27.trim() === "") {
+    console.log(`INVALID INPUT`);
+} else {
+    let stringFirstLetter_27 = userString_27.trim().charAt(0).toLowerCase();
+    let vowels_27 = "aeiou";
+
+    if (vowels_27.includes(stringFirstLetter_27)) {
+        console.log(`${userString_27} starts with VOWELS`);
+    } else {
+        console.log(`${userString_27} does NOT starts with VOWELS`);
+    }
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 28. Check whether a user's rating (1–5) is valid input.
+let userRating_28 = 1;
+
+if (typeof userRating_28 !== "number" || isNaN(userRating_28)) {
+    console.log(`INVALID INPUT`);
+} else if (userRating_28 >= 1 && userRating_28 <= 5) {
+    console.log(`User give rating: ${userRating_28}`);
+} else {
+    console.log(`User Rating is not VALID`);
+}
+
+console.log();
+
+console.log(object);
 
 // ==================================================================================================================================================
 // ===================================================================== Medium =====================================================================
