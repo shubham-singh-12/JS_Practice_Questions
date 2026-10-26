@@ -520,7 +520,7 @@ console.log();
 // ==================================================================================================================================================
 // 2. Find the largest among two numbers.
 let firstNumber_2 = 1;
-let secondNumber_2 = -1;
+let secondNumber_2 = "1";
 
 if (
     typeof firstNumber_2 !== "number" ||
