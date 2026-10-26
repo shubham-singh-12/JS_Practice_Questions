@@ -500,19 +500,66 @@ if (typeof userRating_28 !== "number" || isNaN(userRating_28)) {
 
 console.log();
 
-console.log();
-
 // ==================================================================================================================================================
 // ===================================================================== Medium =====================================================================
 // ==================================================================================================================================================
 
 // 1. Check whether a person is eligible to vote.
+let personAge_1 = 22;
+
+if (typeof personAge_1 !== "number" || isNaN(personAge_1) || personAge_1 < 0) {
+    console.log(`INVALID AGE`);
+} else if (personAge_1 >= 18 && personAge_1 <= 60) {
+    console.log(`Eligible to Vote`);
+} else {
+    console.log(`Not Eligible to Vote`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 2. Find the largest among two numbers.
+let firstNumber_2 = 1;
+let secondNumber_2 = -1;
+
+if (
+    typeof firstNumber_2 !== "number" ||
+    typeof secondNumber_2 !== "number" ||
+    isNaN(firstNumber_2) ||
+    isNaN(secondNumber_2)
+) {
+    console.log(`INVALID INPUTS`);
+} else if (firstNumber_2 > secondNumber_2) {
+    console.log(`${firstNumber_2} is GREATER than ${secondNumber_2}`);
+} else if (secondNumber_2 > firstNumber_2) {
+    console.log(`${secondNumber_2} is GREATER than ${firstNumber_2}`);
+} else {
+    console.log(`BOTH are EQUAL`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 3. Find the largest among three numbers.
+let firstNumber_3 = 4;
+let secondNumber_3 = 5;
+let thirdNumber_3 = 6;
+
+if (
+    typeof firstNumber_3 !== "number" ||
+    typeof secondNumber_3 !== "number" ||
+    typeof thirdNumber_3 !== "number" ||
+    isNaN(firstNumber_3) ||
+    isNaN(secondNumber_3) ||
+    isNaN(thirdNumber_3)
+) {
+    console.log(`INVALID INPUTS`);
+} else {
+    let largest_3 = Math.max(firstNumber_3, secondNumber_3, thirdNumber_3);
+    console.log(`$Largest number is ${largest_3}`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 4. Check whether a year is a leap year.
