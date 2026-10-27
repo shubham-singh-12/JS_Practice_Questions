@@ -563,33 +563,207 @@ console.log();
 
 // ==================================================================================================================================================
 // 4. Check whether a year is a leap year.
+let currentYear_4 = 2024;
+
+if (
+    (currentYear_4 % 4 === 0 && currentYear_4 % 100 !== 0) ||
+    currentYear_4 % 400 === 0
+) {
+    console.log(`${currentYear_4} is a LEAP YEAR`);
+} else {
+    console.log(`${currentYear_4} is NOT a LEAP YEAR`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 5. Check whether a number is divisible by both 3 and 5.
+let userNumber_5 = 100;
+
+if (typeof userNumber_5 !== "number" || isNaN(userNumber_5)) {
+    console.log(`INVALID INPUT`);
+} else if (userNumber_5 % 3 === 0 && userNumber_5 % 5 === 0) {
+    console.log(`${userNumber_5} is divisible by both 3 and 5`);
+} else {
+    console.log(`${userNumber_5} is NOT divisible by both 3 and 5`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 6. Check whether a username is `"admin"` and password is `"1234"`.
+let userName_6 = "admin";
+let userPassword_6 = "1234";
+
+if (userName_6 === "admin" && userPassword_6 === "1234") {
+    console.log(`Access Granted`);
+} else {
+    console.log(`Access Denied`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 7. Determine if someone qualifies for a student discount (age under 25).
+let studentAge_7 = 24;
+let productPrice_7 = 100;
+let discount_7;
+let finalPrice_7;
+
+if (typeof studentAge_7 !== "number" || isNaN(studentAge_7)) {
+    console.log(`Enter age as a NUMBER`);
+} else if (studentAge_7 > 15 && studentAge_7 <= 18) {
+    discount_7 = 20;
+    finalPrice_7 = productPrice_7 - (productPrice_7 * discount_7) / 100;
+    console.log(
+        `Student is Eligible for ${discount_7}% discount. \nFinal Price: ${finalPrice_7}`,
+    );
+} else if (studentAge_7 > 18 && studentAge_7 < 25) {
+    discount_7 = 25;
+    finalPrice_7 = productPrice_7 - (productPrice_7 * discount_7) / 100;
+    console.log(
+        `Student is Eligible for ${discount_7}% discount. \nFinal Price: ${finalPrice_7}`,
+    );
+} else {
+    discount_7 = 0;
+    finalPrice_7 = productPrice_7 - (productPrice_7 * discount_7) / 100;
+    console.log(
+        `Student is NOT Eligible for ${discount_7}% discount. \nFinal Price: ${finalPrice_7}`,
+    );
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 8. Identify the bigger of two given marks.
+let firstMarks_8 = 78;
+let secondMarks_8 = 98;
+
+if (
+    typeof firstMarks_8 !== "number" ||
+    typeof secondMarks_8 !== "number" ||
+    isNaN(firstMarks_8) ||
+    isNaN(secondMarks_8)
+) {
+    console.log(`INVALID MARKS GIVEN`);
+} else if (firstMarks_8 > secondMarks_8) {
+    console.log(`${firstMarks_8} is BIGGER than ${secondMarks_8}`);
+} else if (secondMarks_8 > firstMarks_8) {
+    console.log(`${secondMarks_8} is GREATER than ${firstMarks_8}`);
+} else {
+    console.log(`${firstMarks_8} EQUALS to ${secondMarks_8}`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 9. Identify the biggest of three given marks.
+let firstMarks_9 = 67;
+let secondMarks_9 = 76;
+let thirdMarks_9 = 67;
+
+if (
+    typeof firstMarks_9 !== "number" ||
+    typeof secondMarks_9 !== "number" ||
+    typeof thirdMarks_9 !== "number" ||
+    isNaN(firstMarks_9) ||
+    isNaN(secondMarks_9) ||
+    isNaN(thirdMarks_9)
+) {
+    console.log(`INVALID INPUT`);
+} else if (firstMarks_9 > secondMarks_9 && firstMarks_9 > thirdMarks_9) {
+    console.log(
+        `${firstMarks_9} is BIGGER than ${secondMarks_9} & ${thirdMarks_9}`,
+    );
+} else if (secondMarks_9 > thirdMarks_9 && secondMarks_9 > firstMarks_9) {
+    console.log(
+        `${secondMarks_9} is BIGGER than ${firstMarks_9} & ${thirdMarks_9}`,
+    );
+} else if (thirdMarks_9 > firstMarks_9 && thirdMarks_9 > secondMarks_9) {
+    console.log(
+        `${thirdMarks_9} is BIGGER than ${firstMarks_9} & ${secondMarks_9}`,
+    );
+} else {
+    console.log(`Either two OR all are equal`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 10. Determine if a given year falls in the 21st century.
+let userYear_10 = 2003;
+
+if (typeof userYear_10 !== "number" || isNaN(userYear_10)) {
+    console.log(`INVALID INPUT`);
+} else if (userYear_10 >= 2001 && userYear_10 <= 2100) {
+    console.log(`${userYear_10} falls in the 21st Century`);
+} else {
+    console.log(`${userYear_10} not falls in the 21st Century`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 11. Determine if a number is divisible by both 4 and 6.
+let userNumber_11 = 46;
+
+if (typeof userNumber_11 !== "number" || isNaN(userNumber_11)) {
+    console.log(`INVALID INPUT`);
+} else if (userNumber_11 % 4 === 0 && userNumber_11 % 6 === 0) {
+    console.log(`${userNumber_11} is divisible by both 4 and 6`);
+} else {
+    console.log(`${userNumber_11} is NOT divisible by both 4 and 6`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 12. Verify that an entered PIN equals "4321".
+let userPin_12 = "1234";
+
+if (userPin_12 === "4321") {
+    console.log(`User entered CORRECT PIN`);
+} else {
+    console.log(`User entered WRONG PIN`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 13. Build a BMI calculator that classifies a person as Underweight, Normal, Overweight, or Obese.
+
+// Entered Weight in Kg
+let userWeight_13 = 45.55;
+
+// Entered Height in m
+let userHeight_13 = 1.9;
+
+let userBMI_13 = (userWeight_13 / (userHeight_13 * userHeight_13));
+
+if (
+    typeof userWeight_13 !== "number" ||
+    typeof userHeight_13 !== "number" ||
+    isNaN(userWeight_13) ||
+    isNaN(userHeight_13) ||
+    userWeight_13 <= 0 ||
+    userHeight_13 <= 0
+) {
+    console.log(`INVALID INPUTS`);
+} else if (userBMI_13 < 18.5) {
+    console.log(
+        `User BMI: ${userBMI_13} \nUNDERWEIGHT. \nNutritional deficiency risk`,
+    );
+} else if (userBMI_13 >= 18.5 && userBMI_13 <= 24.9) {
+    console.log(
+        `User BMI: ${userBMI_13} \nNORMAL WEIGHT. \nLow risk (Healthy range)`,
+    );
+} else if (userBMI_13 >= 25 && userBMI_13 <= 29.9) {
+    console.log(`User BMI: ${userBMI_13} \nOVERWEIGHT. \nIncreased risk`);
+} else {
+    console.log(`User BMI: ${userBMI_13} \nOBESE. \nHigh clinical risk`);
+}
+
+console.log();
 
 // ==================================================================================================================================================
 // 14. Determine ticket pricing based on both age and day of the week (weekday/weekend discount).
