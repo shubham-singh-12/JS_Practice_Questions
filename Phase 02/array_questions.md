@@ -74,6 +74,213 @@ Expected Output: ["80%", "90%", "70%"]
 let cart = ["Mouse", "Keyboard", "Monitor", "Laptop"];
 ```
 
+18. Create an array of 6 cities. Print the second and second-last elements.
+
+<hr>
+
+19. Print the total number of items in the array.
+
+```JavaScript
+let books = ["Atomic Habits", "Deep Work", "Ikigai", "Zero to One"];
+```
+
+<hr>
+
+20. Add "Cherry" at the beginning of the array, then add "Guava" at the end.
+
+```JavaScript
+let fruits = ["Apple", "Banana", "Mango"];
+```
+
+<hr>
+
+21. Remove the first song from the playlist and print the removed song.
+
+```JavaScript
+let playlist = ["Kesariya", "Tum Hi Ho", "Apna Bana Le", "Raataan Lambiyan"];
+```
+
+<hr>
+
+22. Remove the last task from the list and print the remaining tasks.
+
+```JavaScript
+let tasks = ["Wake up", "Exercise", "Study", "Sleep"];
+```
+
+<hr>
+
+23. Sort the array in descending order.
+
+```JavaScript
+let scores = [45, 92, 17, 68, 33];
+```
+
+```
+Expected output: [92, 68, 45, 33, 17]
+```
+
+<hr>
+
+24. Create a new array containing only the even numbers.
+
+```JavaScript
+let numbers = [11, 22, 35, 48, 53, 60, 77];
+```
+
+```
+Expected output: [22, 48, 60]
+```
+
+<hr>
+
+25. Create a new array where every number is doubled.
+
+```JavaScript
+let nums = [4, 9, 12, 20];
+```
+
+```
+Expected output: [8, 18, 24, 40]
+```
+
+<hr>
+
+26. Create a new array where each name is converted to UPPERCASE.
+
+```JavaScript
+let names = ["neha", "karan", "meera"];
+```
+
+```
+Expected output: ["NEHA", "KARAN", "MEERA"]
+```
+
+<hr>
+
+27. Create a new array where each price is prefixed with ₹.
+
+```JavaScript
+let prices = [199, 499, 999];
+```
+
+```
+Expected output: ["₹199", "₹499", "₹999"]
+```
+
+<hr>
+
+28. Check if "Delhi" exists in the array. Print true or false.
+
+```JavaScript
+let cities = ["Mumbai", "Pune", "Chennai", "Kolkata"];
+```
+
+<hr>
+
+29. Find the index of "Green" in the array.
+
+```JavaScript
+let colors = ["Red", "Blue", "Green", "Yellow"];
+```
+
+```
+Expected output: 2
+```
+
+<hr>
+
+30. Find the first number greater than 50 in the array.
+
+```JavaScript
+let values = [12, 34, 58, 21, 90];
+```
+
+```
+Expected output: 58
+```
+
+<hr>
+
+31. Find the sum of all the numbers in the array.
+
+```JavaScript
+let expenses = [120, 340, 80, 260];
+```
+
+```
+Expected output: 800
+```
+
+<hr>
+
+32. Find the largest number in the array.
+
+```JavaScript
+let temperatures = [28, 35, 31, 42, 39];
+```
+
+```
+Expected output: 42
+```
+
+<hr>
+
+33. Join all the elements into a single string separated by " - ".
+
+```JavaScript
+let days = ["Mon", "Tue", "Wed", "Thu"];
+```
+
+```
+Expected output: "Mon - Tue - Wed - Thu"
+```
+
+<hr>
+
+34. Combine the two arrays into one new array.
+
+```JavaScript
+let team1 = ["Arjun", "Sneha"];
+let team2 = ["Vikram", "Pooja", "Dev"];
+```
+
+```
+Expected output: ["Arjun", "Sneha", "Vikram", "Pooja", "Dev"]
+```
+
+<hr>
+
+35. Create a new array containing only the first 3 elements.
+
+```JavaScript
+let rankers = ["Anita", "Rohan", "Isha", "Kabir", "Tanya"];
+```
+
+```
+Expected output: ["Anita", "Rohan", "Isha"]
+```
+
+<hr>
+
+36. Remove duplicate values from the array.
+
+```JavaScript
+let tags = ["js", "html", "css", "js", "html", "react"];
+```
+
+```
+Expected output: ["js", "html", "css", "react"]
+```
+
+<hr>
+
+37. Loop through the array and print each item in the format: 1. Pen, 2. Notebook, etc.
+
+```JavaScript
+let stationery = ["Pen", "Notebook", "Eraser", "Ruler"];
+```
+
 <hr><hr>
 <br>
 
