@@ -738,7 +738,7 @@ let userWeight_13 = 45.55;
 // Entered Height in m
 let userHeight_13 = 1.9;
 
-let userBMI_13 = (userWeight_13 / (userHeight_13 * userHeight_13));
+let userBMI_13 = userWeight_13 / (userHeight_13 * userHeight_13);
 
 if (
     typeof userWeight_13 !== "number" ||
@@ -767,12 +767,106 @@ console.log();
 
 // ==================================================================================================================================================
 // 14. Determine ticket pricing based on both age and day of the week (weekday/weekend discount).
+let userAge_14 = 19;
+let currentDay_14 = "Monday";
+let ticketPrice_14 = 100;
+let discountedPrice_14;
+
+if (typeof userAge_14 !== "number" || isNaN(userAge_14) || userAge_14 <= 0) {
+    console.log(`INVALID USER AGE`);
+} else if (userAge_14 > 60) {
+    console.log(`User Age: ${userAge_14}yrs. \nSenior Citizen not Allowed`);
+} else {
+    if (
+        currentDay_14 === "Monday" ||
+        currentDay_14 === "Tuesday" ||
+        currentDay_14 === "Wednesday" ||
+        currentDay_14 === "Thursday" ||
+        currentDay_14 === "Friday"
+    ) {
+        if (userAge_14 <= 18) {
+            discountedPrice_14 = ticketPrice_14 - ticketPrice_14 * (8 / 100);
+        } else {
+            discountedPrice_14 = ticketPrice_14;
+        }
+        console.log(`Final Ticket Price: ${discountedPrice_14}`);
+    } else if (currentDay_14 === "Saturday" || currentDay_14 === "Sunday") {
+        if (userAge_14 <= 18) {
+            discountedPrice_14 = ticketPrice_14 - ticketPrice_14 * (18 / 100);
+        } else {
+            discountedPrice_14 = ticketPrice_14;
+        }
+        console.log(`Final Ticket Price: ${discountedPrice_14}`);
+    } else {
+        console.log(`INVALID DAY`);
+    }
+}
 
 // ==================================================================================================================================================
 // 15. Build a simple traffic light simulator that prints an action ("Stop", "Wait", "Go") based on color input.
+let colorInput_15 = "Red";
+let action_15;
+
+switch (colorInput_15) {
+    case "Red":
+    case "red":
+        action_15 = "STOP";
+        break;
+
+    case "Yellow":
+    case "yellow":
+        action_15 = "WAIT";
+        break;
+
+    case "Green":
+    case "green":
+        action_15 = "GO";
+        break;
+
+    default:
+        console.log("INVALID COLOR INPUT");
+}
+
+if (action_15 !== undefined) {
+    console.log(action_15);
+}
 
 // ==================================================================================================================================================
 // 16. Check whether a triangle is equilateral, isosceles, or scalene given three side lengths.
+let firstSide_16 = 12;
+let secondSide_16 = 12;
+let thirdSide_16 = 12;
+let triangleShape_16;
+
+if (
+    typeof firstSide_16 !== "number" ||
+    isNaN(firstSide_16) ||
+    typeof secondSide_16 !== "number" ||
+    isNaN(secondSide_16) ||
+    typeof thirdSide_16 !== "number" ||
+    isNaN(thirdSide_16)
+) {
+    console.log(`INVALID SIDE LENGTH`);
+} else if (
+    firstSide_16 + secondSide_16 <= thirdSide_16 ||
+    secondSide_16 + thirdSide_16 <= firstSide_16 ||
+    thirdSide_16 + firstSide_16 <= secondSide_16
+) {
+    console.log(`NOT A VALID TRIANGLE`);
+} else {
+    if (firstSide_16 === secondSide_16 && secondSide_16 === thirdSide_16) {
+        triangleShape_16 = "EQUILATERAL";
+    } else if (
+        firstSide_16 === secondSide_16 ||
+        secondSide_16 === thirdSide_16 ||
+        thirdSide_16 === firstSide_16
+    ) {
+        triangleShape_16 = "ISOSCELES";
+    } else {
+        triangleShape_16 = "SCALENE";
+    }
+    console.log(`Triangle is ${triangleShape_16}`);
+}
 
 // ==================================================================================================================================================
 // 17. Determine whether a given number is a perfect square.
