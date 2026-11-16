@@ -870,21 +870,180 @@ if (
 
 // ==================================================================================================================================================
 // 17. Determine whether a given number is a perfect square.
+let userNumber_17 = 20;
+let perfectSquare_17;
+
+if (
+    typeof userNumber_17 !== "number" ||
+    isNaN(userNumber_17) ||
+    userNumber_17 < 0 ||
+    !Number.isFinite(userNumber_17)
+) {
+    console.log(`INVALID NUMBER INPUTS`);
+} else {
+    perfectSquare_17 = Number.isInteger(Math.sqrt(userNumber_17));
+    console.log(perfectSquare_17);
+}
 
 // ==================================================================================================================================================
 // 18. Build a password strength checker (Weak/Medium/Strong) based on length and character variety.
+let userPassword_18 = "Pass@123";
+let passwordStrength_18;
+
+if (typeof userPassword_18 !== "string" || userPassword_18 === "") {
+    console.log(`INVALID PASSWORD INPUT`);
+} else {
+    let hasLower = /[a-z]/.test(userPassword_18);
+    let hasUpper = /[A-Z]/.test(userPassword_18);
+    let hasNumber = /[0-9]/.test(userPassword_18);
+    let hasSpecial = /[^A-Za-z0-9]/.test(userPassword_18);
+
+    // Password Variety
+    let userPasswordVariety_18 =
+        Number(hasLower) +
+        Number(hasUpper) +
+        Number(hasNumber) +
+        Number(hasSpecial);
+
+    // Count User Password Strength (by combining Length + Variety)
+    if (userPassword_18.length < 6 || userPasswordVariety_18 <= 1) {
+        passwordStrength_18 = "Weak";
+    } else if (userPassword_18.length >= 8 && userPasswordVariety_18 >= 3) {
+        passwordStrength_18 = "Strong";
+    } else {
+        passwordStrength_18 = "Medium";
+    }
+
+    console.log(passwordStrength_18);
+}
 
 // ==================================================================================================================================================
 // 19. Determine the quadrant of a point (x, y) on a Cartesian plane.
+let xAxis_19 = 10;
+let yAxis_19 = 10;
+let cartesianPlane_19;
+
+if (
+    typeof xAxis_19 !== "number" ||
+    typeof yAxis_19 !== "number" ||
+    isNaN(xAxis_19) ||
+    isNaN(yAxis_19) ||
+    xAxis_19 === Infinity ||
+    xAxis_19 === -Infinity ||
+    yAxis_19 === Infinity ||
+    yAxis_19 === -Infinity
+) {
+    console.log(`INVALID QUADRANT`);
+} else {
+    if (xAxis_19 > 0 && yAxis_19 > 0) {
+        cartesianPlane_19 = `Quadrant 1`;
+    } else if (xAxis_19 < 0 && yAxis_19 > 0) {
+        cartesianPlane_19 = `Quadrant 2`;
+    } else if (xAxis_19 < 0 && yAxis_19 < 0) {
+        cartesianPlane_19 = `Quadrant 3`;
+    } else if (xAxis_19 > 0 && yAxis_19 < 0) {
+        cartesianPlane_19 = `Quadrant 4`;
+    } else if (xAxis_19 === 0 && yAxis_19 === 0) {
+        cartesianPlane_19 = `Origin`;
+    } else if (xAxis_19 === 0) {
+        cartesianPlane_19 = `Y-Axis`;
+    } else {
+        cartesianPlane_19 = `X-Axis`;
+    }
+
+    console.log(cartesianPlane_19);
+}
 
 // ==================================================================================================================================================
 // 20. Build a simple login system that also locks the account after checking a failed-attempts counter.
+let correctUsername_20 = "admin";
+let correctPassword_20 = "Pass@123";
+let totalAttempt_20 = 3;
+
+let userInputUsername_20 = "admin";
+let userInputPassword_20 = "wrong@123";
+let userAttempt_20 = 3;
+
+if (
+    typeof userInputUsername_20 !== "string" ||
+    typeof userInputPassword_20 !== "string" ||
+    userInputUsername_20.length === 0 ||
+    userInputPassword_20.length === 0
+) {
+    console.log(`INVALID USERNAME / PASSWORD`);
+} else {
+    if (userAttempt_20 < totalAttempt_20 && userAttempt_20 >= 0) {
+        if (
+            userInputUsername_20 === correctUsername_20 &&
+            userInputPassword_20 === correctPassword_20
+        ) {
+            console.log(`Welcome User`);
+        } else {
+            console.log(`Retry Again`);
+        }
+    } else {
+        console.log(`Account Temporary Locked.\n Try again after some time`);
+    }
+}
 
 // ==================================================================================================================================================
 // 21. Determine shipping cost based on weight (in kg) using tiered pricing.
+let packageWeight_21 = 3;
+let shippingPrice_20;
+
+// for 3kg weight (₹10 per 1kg)
+if (packageWeight_21 <= 3) {
+    shippingPrice_20 = packageWeight_21 * 10;
+
+    // for 8kg weight (₹30 per 1kg)
+} else if (packageWeight_21 > 3 && packageWeight_21 <= 8) {
+    shippingPrice_20 = 3 * 10 + (packageWeight_21 - 3) * 30;
+
+    // for 15kg weight (₹50 per 1kg)
+} else if (packageWeight_21 > 8 && packageWeight_21 <= 15) {
+    shippingPrice_20 = 3 * 10 + 5 * 30 + (packageWeight_21 - 8) * 50;
+
+    // for 20kg weight (₹80 per 1kg)
+} else if (packageWeight_21 > 15 && packageWeight_21 <= 20) {
+    shippingPrice_20 = 3 * 10 + 5 * 30 + 7 * 50 + (packageWeight_21 - 15) * 80;
+
+    // More than 20kg weight (₹100 per 1kg)
+} else {
+    shippingPrice_20 =
+        3 * 10 + 5 * 30 + 7 * 50 + 5 * 80 + (packageWeight_21 - 20) * 100;
+}
+
+console.log(`Total Shipping Price: ₹${shippingPrice_20}`);
 
 // ==================================================================================================================================================
 // 22. Check whether three given numbers can form a valid triangle (triangle inequality).
+let firstSide_22 = 22;
+let secondSide_22 = 33;
+let thirdSide_22 = 44;
+
+if (
+    typeof firstSide_22 !== "number" ||
+    typeof secondSide_22 !== "number" ||
+    typeof thirdSide_22 !== "number" ||
+    isNaN(firstSide_22) ||
+    isNaN(secondSide_22) ||
+    isNaN(thirdSide_22) ||
+    firstSide_22 <= 0 ||
+    secondSide_22 <= 0 ||
+    thirdSide_22 <= 0
+) {
+    console.log(`INVALID TRIANGLE INPUTS`);
+} else {
+    if (
+        firstSide_22 + secondSide_22 > thirdSide_22 &&
+        secondSide_22 + thirdSide_22 > firstSide_22 &&
+        thirdSide_22 + firstSide_22 > secondSide_22
+    ) {
+        console.log(`VALID TRIANGLE`);
+    } else {
+        console.log(`INVALID TRIANGLE`);
+    }
+}
 
 // ==================================================================================================================================================
 // 23. Build an income tax calculator with multiple tax slabs.
@@ -897,18 +1056,204 @@ if (
 //   - ₹12,00,001 to ₹15,00,000   : 20% (Max ₹60,000)
 //   - Above ₹15,00,000           : 30%
 // */
+let userIncome_23 = 1650000;
+let finalTaxToBePaid_23;
+
+if (
+    typeof userIncome_23 !== "number" ||
+    isNaN(userIncome_23) ||
+    userIncome_23 < 0
+) {
+    console.log(`INVALID USER INCOME`);
+
+    // ₹0 to ₹3,00,000            : 0% (Exempt)
+} else if (userIncome_23 >= 0 && userIncome_23 <= 300000) {
+    finalTaxToBePaid_23 = 0;
+
+    // ₹3,00,001 to ₹7,00,000     : 5%  (Max ₹20,000)
+} else if (userIncome_23 > 300000 && userIncome_23 <= 700000) {
+    finalTaxToBePaid_23 = 0 + ((userIncome_23 - 300000) * 5) / 100;
+
+    // ₹7,00,001 to ₹10,00,000    : 10% (Max ₹30,000)
+} else if (userIncome_23 > 700000 && userIncome_23 <= 1000000) {
+    finalTaxToBePaid_23 = 0 + 20000 + ((userIncome_23 - 700000) * 10) / 100;
+
+    // ₹10,00,001 to ₹12,00,000   : 15% (Max ₹30,000)
+} else if (userIncome_23 > 1000000 && userIncome_23 <= 1200000) {
+    finalTaxToBePaid_23 =
+        0 + 20000 + 30000 + ((userIncome_23 - 1000000) * 15) / 100;
+
+    // ₹12,00,001 to ₹15,00,000   : 20% (Max ₹60,000)
+} else if (userIncome_23 > 1200000 && userIncome_23 <= 1500000) {
+    finalTaxToBePaid_23 =
+        0 + 20000 + 30000 + 30000 + ((userIncome_23 - 1200000) * 20) / 100;
+
+    // Above ₹15,00,000           : 30%
+} else {
+    finalTaxToBePaid_23 =
+        0 +
+        20000 +
+        30000 +
+        30000 +
+        60000 +
+        ((userIncome_23 - 1500000) * 30) / 100;
+}
+
+if (finalTaxToBePaid_23 !== undefined) {
+    console.log(`Final Tax to be paid is: ${finalTaxToBePaid_23}`);
+}
 
 // ==================================================================================================================================================
 // 24. Build a movie rating classifier: G, PG, PG-13, R based on age and content flag.
+let userAge_24 = 19;
+
+// options: "none", "mild", "moderate", "adult"
+let contentFlag_24 = "mild";
+let movieRating_24;
+
+if (
+    typeof userAge_24 !== "number" ||
+    isNaN(userAge_24) ||
+    userAge_24 <= 0 ||
+    typeof contentFlag_24 !== "string"
+) {
+    console.log(`INVALID INPUTS`);
+} else if (contentFlag_24 === "adult" || userAge_24 >= 18) {
+    movieRating_24 = "R";
+} else if (contentFlag_24 === "moderate" || userAge_24 >= 13) {
+    movieRating_24 = "PG-13";
+} else if (contentFlag_24 === "mild" || userAge_24 >= 8) {
+    movieRating_24 = "PG";
+} else {
+    movieRating_24 = "G";
+}
+
+if (movieRating_24 !== undefined) {
+    console.log(`Recommended Movie Rating: ${movieRating_24}`);
+}
 
 // ==================================================================================================================================================
 // 25. Determine exam pass/fail status based on both attendance percentage and marks.
+let studentTotalAttendance_25 = 60;
+let studentTotalMarks_25 = 90;
+let isStudentPass_25;
+
+if (
+    typeof studentTotalAttendance_25 !== "number" ||
+    typeof studentTotalMarks_25 !== "number" ||
+    isNaN(studentTotalMarks_25) ||
+    isNaN(studentTotalAttendance_25) ||
+    studentTotalMarks_25 < 0 ||
+    studentTotalAttendance_25 < 0
+) {
+    console.log(`INVALID INPUTS`);
+} else if (studentTotalMarks_25 > 100 || studentTotalAttendance_25 > 100) {
+    console.log(
+        `Student total Marks / Attendance must not be Greater than 100`,
+    );
+} else if (studentTotalAttendance_25 >= 75 && studentTotalMarks_25 >= 40) {
+    isStudentPass_25 = "Pass";
+} else {
+    isStudentPass_25 = "Fail";
+}
+
+if (isStudentPass_25 !== undefined) {
+    console.log(`Student is ${isStudentPass_25}`);
+}
 
 // ==================================================================================================================================================
 // 26. Build a simple currency exchange calculator using switch for currency codes.
+let userINRCurrency_26 = 28;
+
+// Option: "USD", "EUR", "GBP", "JPY", "AED"
+let targetCurrency_26 = "USD";
+let convertedAmount_26;
+
+if (
+    typeof userINRCurrency_26 !== "number" ||
+    isNaN(userINRCurrency_26) ||
+    userINRCurrency_26 < 0 ||
+    typeof targetCurrency_26 !== "string"
+) {
+    console.log(`INVALID INPUTS`);
+} else {
+    switch (targetCurrency_26.toUpperCase()) {
+        case "USD":
+            convertedAmount_26 = userINRCurrency_26 / 84;
+            break;
+
+        case "EUR":
+            convertedAmount_26 = userINRCurrency_26 / 91;
+            break;
+
+        case "GBP":
+            convertedAmount_26 = userINRCurrency_26 / 108;
+            break;
+
+        case "JPY":
+            convertedAmount_26 = userINRCurrency_26 * 1.8;
+            break;
+
+        case "AED":
+            convertedAmount_26 = userINRCurrency_26 / 22.8;
+            break;
+
+        default:
+            console.log(`CURRENCY CODE NOT SUPPORTED`);
+    }
+}
+
+if (convertedAmount_26 !== undefined) {
+    console.log(
+        `₹${userINRCurrency_26} INR = ${convertedAmount_26} ${targetCurrency_26.toUpperCase()}`,
+    );
+}
 
 // ==================================================================================================================================================
 // 27. Determine the day type (Public Holiday, Weekend, Working Day) using both a day number and a holiday flag.
+
+// Using Day Name instead of day number
+let currentWeekDay_27 = "Monday";
+let isPublicHoliday_27 = true;
+let dayType_27;
+
+if (
+    typeof currentWeekDay_27 !== "string" ||
+    typeof isPublicHoliday_27 !== "boolean"
+) {
+    console.log(`INVALID INPUTS`);
+} else if (
+    isPublicHoliday_27 === true &&
+    (currentWeekDay_27 === "Monday" ||
+        currentWeekDay_27 === "Tuesday" ||
+        currentWeekDay_27 === "Wednesday" ||
+        currentWeekDay_27 === "Thursday" ||
+        currentWeekDay_27 === "Friday" ||
+        currentWeekDay_27 === "Saturday" ||
+        currentWeekDay_27 === "Sunday")
+) {
+    dayType_27 = "Public Holiday";
+} else if (
+    (currentWeekDay_27 === "Saturday" || currentWeekDay_27 === "Sunday") &&
+    isPublicHoliday_27 === false
+) {
+    dayType_27 = "Weekend";
+} else if (
+    isPublicHoliday_27 === false &&
+    (currentWeekDay_27 === "Monday" ||
+        currentWeekDay_27 === "Tuesday" ||
+        currentWeekDay_27 === "Wednesday" ||
+        currentWeekDay_27 === "Thursday" ||
+        currentWeekDay_27 === "Friday")
+) {
+    dayType_27 = "Working Day";
+} else {
+    dayType_27 = "INVALID DAY";
+}
+
+if (dayType_27 !== undefined) {
+    console.log(`Current Day is ${currentWeekDay_27}, \n${dayType_27}`);
+}
 
 // ==================================================================================================================================================
 
