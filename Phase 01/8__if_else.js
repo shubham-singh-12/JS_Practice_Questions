@@ -1266,12 +1266,108 @@ if (dayType_27 !== undefined) {
 // - 75+ → B
 // - 50+ → C
 // - below 50 → Fail
+let hindiMarks_1 = 50;
+let englishMarks_1 = 60;
+let mathsMarks_1 = 60;
+let scienceMarks_1 = 50;
+let socialStudiesMarks_1 = 80;
+let studentGrade_1;
+
+let totalMarks_1 =
+    hindiMarks_1 +
+    englishMarks_1 +
+    mathsMarks_1 +
+    scienceMarks_1 +
+    socialStudiesMarks_1;
+let totalPercentage_1 = (totalMarks_1 / 500) * 100;
+
+if (totalPercentage_1 >= 90 && totalPercentage_1 <= 100) {
+    studentGrade_1 = "A";
+} else if (totalPercentage_1 >= 75 && totalPercentage_1 < 90) {
+    studentGrade_1 = "B";
+} else if (totalPercentage_1 >= 50 && totalPercentage_1 < 75) {
+    studentGrade_1 = "C";
+} else if (totalPercentage_1 >= 0 && totalPercentage_1 < 50) {
+    studentGrade_1 = "Fail";
+}
+
+if (studentGrade_1 !== undefined) {
+    console.log(
+        `Student \nPercentage: ${totalPercentage_1.toFixed(2)} \nGrade: ${studentGrade_1}`,
+    );
+} else {
+    console.log("INVALID GRADES");
+}
 
 // ==================================================================================================================================================
 // 2. Create a calculator using `switch` statement.
+let userFirstNumber_2 = 23;
+let userSecondNumber_2 = 56;
+let operatorUsed_2 = "+";
+let finalResult_2;
+
+switch (operatorUsed_2) {
+    case "+":
+        finalResult_2 = userFirstNumber_2 + userSecondNumber_2;
+        break;
+
+    case "-":
+        finalResult_2 = userFirstNumber_2 - userSecondNumber_2;
+        break;
+
+    case "*":
+        finalResult_2 = userFirstNumber_2 * userSecondNumber_2;
+        break;
+
+    case "/":
+        if (userSecondNumber_2 !== 0) {
+            finalResult_2 = userFirstNumber_2 / userSecondNumber_2;
+        }
+        break;
+
+    default:
+        finalResult_2 = undefined;
+}
+
+if (finalResult_2 !== undefined) {
+    console.log(`Answer = ${finalResult_2}`);
+} else {
+    console.log("INVALID INPUTS / OPERATIONS PERFORMED BY USER");
+}
 
 // ==================================================================================================================================================
 // 3. Build a fuel efficiency rating system:
+let distanceCovered_3 = 20;
+let fuelConsumed_3 = 20;
+let mileage_3;
+let efficiencyRating_3;
+
+if (
+    typeof distanceCovered_3 === "number" &&
+    typeof fuelConsumed_3 === "number" &&
+    distanceCovered_3 >= 0 &&
+    fuelConsumed_3 > 0
+) {
+    mileage_3 = Math.floor(distanceCovered_3 / fuelConsumed_3);
+
+    if (mileage_3 >= 20) {
+        efficiencyRating_3 = "Excellent";
+    } else if (mileage_3 >= 15 && mileage_3 < 20) {
+        efficiencyRating_3 = "Good";
+    } else if (mileage_3 >= 10 && mileage_3 < 15) {
+        efficiencyRating_3 = "Average";
+    } else {
+        efficiencyRating_3 = "Poor";
+    }
+}
+
+if (mileage_3 !== undefined) {
+    console.log(
+        `Vehicle Mileage: ${mileage_3}Km/l \nEfficiency Rating: ${efficiencyRating_3}`,
+    );
+} else {
+    console.log("INVALID INPUTS");
+}
 
 // ==================================================================================================================================================
 // - 20+ km/l → Excellent
